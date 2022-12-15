@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+#### Nextjs With Tailwindcss
+Setup in this link [Nextjs-tailwind](https://beta.nextjs.org/docs/styling/tailwind-css)
+
+#### Using React Query or Tanstack Query  
+I'm using hooks for fetching rest api data from ```pages/api```. Query is delegate promise fetch data processing.
+setup react query [ReactQuery](https://www.google.ru/search?q=using%20next%20js%20hooks%20and%20useQuery%20tanstack#fpstate=ive&vld=cid:9994fd7b,vid:ixZRNz76W90)
+and for Tanstack query [tanstack](https://tanstack.com/query/v4/docs/reference/QueryClient)
+
 ## Getting Started
 
 First, run the development server:
