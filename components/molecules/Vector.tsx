@@ -1,9 +1,6 @@
 import Image from 'next/image'
-import { Browser } from '@/assets/index'
-import { LeafOne } from '@/assets/index'
-import { LeafTwo } from '@/assets/index'
-import { LeafThree } from '@/assets/index'
-import { Mosque } from '@/assets/index'
+import { Browser, Network, LeafOne, LeafTwo, LeafThree, Mosque } from '@/assets/index'
+
 
 const Vector = (props: any) => {
     const images = [props.name]
@@ -12,6 +9,9 @@ const Vector = (props: any) => {
             {
                 props.name === 'browser' ?
                 <Image src={Browser} alt={props.name} width={props.width ? props.width : 20} height={props.height ? props.height : 20} /> :
+
+                props.name === 'network' ?
+                <Image src={Network} alt={props.name} width={props.width ? props.width : 20} height={props.height ? props.height : 20} /> :
 
                 props.name === 'leaf-one' ?
                 <Image src={LeafOne} alt={props.name}/> :
