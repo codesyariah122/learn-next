@@ -28,9 +28,14 @@ const Categories = () => {
                             {
                                 findProducts &&
                                 findProducts.map((product: any) => (
-                                    <li className="hover:text-blue-700 text-1xl cursor-pointer">
-                                        {product.name}
-                                    </li>
+                                    <>
+                                        <li className="hover:text-blue-700 text-1xl cursor-pointer">
+                                            {product.name}
+                                        </li>
+                                        <li>
+                                            {product.description}
+                                        </li>
+                                    </>
                                 ))
                             }
                         </ul>

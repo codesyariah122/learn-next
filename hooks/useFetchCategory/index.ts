@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 
 async function fetchCategoryProduct() {
   const endpoint = "http://localhost:3000/api/store/category";
@@ -26,14 +26,14 @@ async function fetchProducts() {
 const useCategoryProduct = () => {
   return useQuery({
     queryKey: ["getCategories"],
-    queryFn: () => fetchCategoryProduct(),
+    queryFn: async () => await fetchCategoryProduct(),
   });
 };
 
 const useProductData = () => {
   return useQuery({
     queryKey: ["getProducts"],
-    queryFn: () => fetchProducts(),
+    queryFn: async () => await fetchProducts(),
   });
 };
 

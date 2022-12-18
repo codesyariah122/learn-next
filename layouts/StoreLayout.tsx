@@ -23,7 +23,7 @@ export default function StoreLayout({children, categories, isLoading, categoryNa
                         <div className="grid grid-cols-2 gap-3">
                             <div className="col-span-12">
                                 <h1 className="text-2xl font-semibold capitalize">product category</h1>
-                                <ul className="mt-6">
+                                <ul className="mt-6 sticky top-0">
                                     {
                                         isLoading ? 
                                         <>
