@@ -32,7 +32,7 @@ export default function StoreLayout({children, categories, isLoading, categoryNa
                                         <>
                                         {
                                             categories.data.map((category: any) => (
-                                                <li onClick={() => router.push(`/store/${category.name}`)} className="mb-4 text-1xl cursor-pointer" key={category.id}>
+                                                <li onClick={() => router.push(`/store/${category.slug}`)} className="mb-4 text-1xl cursor-pointer" key={category.id}>
                                                     {category.name}
                                                 </li>
                                             ))

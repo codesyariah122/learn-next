@@ -25,7 +25,7 @@ const categories = [
   {
     id: 4,
     name: "nutrition food",
-    slug: "nutrition-foor",
+    slug: "nutrition-food",
   },
   {
     id: 5,

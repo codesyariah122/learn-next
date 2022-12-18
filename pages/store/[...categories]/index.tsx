@@ -8,7 +8,10 @@ const Categories = () => {
     const routeCategory = (router.query.categories as string[]) || []
     const {data: categories, isLoading: isLoadingCategory} = useCategoryProduct()
     const {data: products, isLoading: isLoadingProduct} = useProductData()
-    const findProducts = products ? products.data.map((item: any) => item).filter((category: any) => category.category_name === routeCategory[0]) : []
+    
+    const getProductCategory = categories.data.map((category: any) => category).find((product: any) => product.slug === routeCategory[0])
+    
+    const findProducts = products ? products.data.map((item: any) => item).filter((product: any) => product.category_name === getProductCategory.name) : []
 
     const categoryName = routeCategory ? findProducts.map((product: any) => product.category_name) : 'No Category Product'
 
