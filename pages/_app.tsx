@@ -1,5 +1,5 @@
-import '@/styles/globals.css'
 import '@/styles/tailwind.css'
+import '@/styles/main.css'
 import React from 'react'
 import type { AppProps } from 'next/app'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
