@@ -1,5 +1,5 @@
-import { useCategoryProduct } from "hooks/useFetchCategory"
-import StoreLayout from "layouts/StoreLayout"
+import { useCategoryProduct } from "@/hooks/useFetchCategory"
+import StoreLayout from "@/layouts/StoreLayout"
 
 
 const Store = () => {

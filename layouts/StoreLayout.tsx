@@ -2,7 +2,7 @@ import {Fragment} from 'react'
 import Head from 'next/head'
 import {useRouter} from 'next/router'
 
-export default function StoreLayout({children, categories, isLoading, categoryName}: any) {
+export default function StoreLayout({children, categories=[], isLoading=false, categoryName=''}: any) {
     let current = 'Welcome in my store'
     const router = useRouter()
 
@@ -31,11 +31,13 @@ export default function StoreLayout({children, categories, isLoading, categoryNa
                                         </> :
                                         <>
                                         {
-                                            categories.data.map((category: any) => (
-                                                <li onClick={() => router.push(`/store/${category.slug}`)} className="mb-4 text-1xl cursor-pointer" key={category.id}>
-                                                    {category.name}
-                                                </li>
-                                            ))
+                                            categories.data && (
+                                                categories.data.map((category: any) => (
+                                                    <li onClick={() => router.push(`/store/${category.slug}`)} className="mb-4 text-1xl cursor-pointer" key={category.id}>
+                                                        {category.name}
+                                                    </li>
+                                                ))
+                                            )
                                         }
                                         </>
                                     }

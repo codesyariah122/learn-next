@@ -38,6 +38,11 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<DataType>
 ) {
+  console.log(req.method);
+  if (req.method === "POST") {
+    const body = JSON.stringify(req.body);
+    console.log(typeof body);
+  }
   res.status(200).json({
     message: "Welcome in my store",
     data: categories,
